@@ -6,121 +6,79 @@
     <title>Memory Book | Happy Birthday Amma Sathya ❤️</title>
 
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        .memory-container{
-            width:90%;
-            margin:auto;
-            padding:40px 0;
-        }
-
-        .memory-card{
-            background:rgba(255,255,255,0.35);
-            backdrop-filter:blur(12px);
-            border-radius:20px;
-            padding:25px;
-            margin-bottom:30px;
-            box-shadow:0 8px 20px rgba(0,0,0,0.15);
-            text-align:center;
-        }
-
-        body.dark-mode .memory-card{
-            background:rgba(255,255,255,0.08);
-        }
-
-        .memory-card img{
-            width:100%;
-            max-width:500px;
-            border-radius:20px;
-            margin-bottom:20px;
-        }
-
-        .memory-card h2{
-            color:#d10068;
-            margin-bottom:15px;
-        }
-
-        .caption{
-            font-size:18px;
-            line-height:1.8;
-        }
-    </style>
 </head>
 <body>
 
-<button class="toggle" onclick="darkMode()">🌙 Dark Mode</button>
+    <!-- Dark Mode Button -->
+    <button class="toggle" onclick="darkMode()">🌙 Dark Mode</button>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="quotes.html">Thoughts & Quotes</a>
-    <a href="special.html">Why Amma Is Special</a>
-    <a href="memory.html">Memory Book</a>
-    <a href="letter.html">Letter & Certificate</a>
-</nav>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quotes.html">Thoughts & Quotes</a>
+        <a href="special.html">Why Amma Is Special</a>
+        <a href="wishes.html">Birthday Wishes</a>
+        <a href="blessings.html">Blessings</a>
+        <a href="memories.html">Memory Book</a>
+    </nav>
 
-<section class="hero">
-    <h1>📖 Memory Book ❤️</h1>
+    <section class="hero">
+        <h1>📖 Memory Book ❤️</h1>
 
-    <div class="wish">
-        Precious moments and beautiful memories with Amma Sathya 🌹
-    </div>
-</section>
-
-<div class="memory-container">
-
-    <div class="memory-card">
-        <h2>🌸 Beautiful Memory 1</h2>
-
-        <img src="images/photo1.jpg" alt="Memory 1">
-
-        <div class="caption">
-            Every smile of yours fills our hearts with happiness and love.
-            Thank you for making every moment special.
+        <div class="typing">
+            Precious moments and beautiful memories with Amma Sathya...
         </div>
+    </section>
+
+    <div class="card">
+        <h2>🌸 Childhood Memories</h2>
+        <p>
+            Thank you for holding my hand and guiding me through every step of life.
+            Your love and care have always been my greatest strength.
+        </p>
     </div>
 
-    <div class="memory-card">
-        <h2>💖 Beautiful Memory 2</h2>
-
-        <img src="images/photo2.jpg" alt="Memory 2">
-
-        <div class="caption">
-            Some memories are priceless because they are created with the love of a mother.
-        </div>
+    <div class="card">
+        <h2>💖 Endless Sacrifices</h2>
+        <p>
+            Behind every success and every smile, there has always been your support,
+            encouragement and countless sacrifices.
+        </p>
     </div>
 
-    <div class="memory-card">
-        <h2>🌹 Beautiful Memory 3</h2>
-
-        <img src="images/photo3.jpg" alt="Memory 3">
-
-        <div class="caption">
-            No matter how much time passes, these beautiful moments will always remain in our hearts.
-        </div>
+    <div class="card">
+        <h2>🌹 Beautiful Moments</h2>
+        <p>
+            Every festival, every celebration and every family gathering becomes special
+            because of your presence and love.
+        </p>
     </div>
 
-    <div class="memory-card">
+    <div class="card">
         <h2>✨ Forever Grateful</h2>
+        <p>
+            No matter how much time passes, the memories we share will always remain
+            precious and unforgettable.
+        </p>
+    </div>
 
-        <div class="caption">
-            Dear Amma Sathya ❤️,<br><br>
+    <div class="card">
+        <h2>💌 A Message From My Heart</h2>
 
-            Thank you for your endless love, sacrifices and care.
-            Every memory with you is a blessing that I will cherish forever.
+        <button class="btn" onclick="showMessage()">
+            Reveal Message
+        </button>
+
+        <div class="message" id="message">
+            Thank you for making my life beautiful, Amma Sathya ❤️🌹
         </div>
     </div>
 
-</div>
+    <footer>
+        Made with Endless Love by Gowtham M S ❤️
+    </footer>
 
-<footer>
-    Made with Endless Love by Gowtham M S ❤️
-</footer>
-
-<audio id="birthdayMusic" loop>
-    <source src="music/birthday.mp3" type="audio/mp3">
-</audio>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
