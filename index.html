@@ -6,96 +6,267 @@
     <title>Happy Birthday Amma Sathya ❤️</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body{
+            margin:0;
+            font-family: 'Segoe UI', sans-serif;
+            background:#ffd6e7;
+            overflow-x:hidden;
+            color:#4d004d;
+        }
+
+        nav{
+            background:rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            padding:15px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#b30059;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+        .hero{
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:20px;
+        }
+
+        h1{
+            font-size:60px;
+            color:#d10068;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow{
+            from{
+                text-shadow:0 0 10px white;
+            }
+            to{
+                text-shadow:0 0 30px #ff1493;
+            }
+        }
+
+        .typing{
+            font-size:25px;
+            margin-top:20px;
+            color:#800040;
+            overflow:hidden;
+            white-space:nowrap;
+            border-right:3px solid #ff1493;
+            width:0;
+            animation: typing 6s steps(45,end) forwards;
+        }
+
+        @keyframes typing{
+            from{
+                width:0;
+            }
+            to{
+                width:100%;
+            }
+        }
+
+        .wish{
+            max-width:900px;
+            margin-top:40px;
+            font-size:22px;
+            line-height:1.8;
+        }
+
+        .btn{
+            margin-top:40px;
+            background:#ff1493;
+            color:white;
+            border:none;
+            padding:15px 30px;
+            border-radius:40px;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.4s;
+        }
+
+        .btn:hover{
+            background:#d10068;
+            transform:scale(1.08);
+        }
+
+        .message{
+            display:none;
+            margin-top:30px;
+            font-size:25px;
+            color:#cc0066;
+            font-weight:bold;
+        }
+
+        .heart{
+            position:fixed;
+            top:-20px;
+            color:red;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall{
+            to{
+                transform:translateY(110vh);
+            }
+        }
+
+        .rose{
+            position:fixed;
+            bottom:-20px;
+            font-size:25px;
+            animation: rise linear infinite;
+        }
+
+        @keyframes rise{
+            to{
+                transform:translateY(-110vh);
+            }
+        }
+
+        .dark-mode{
+            background:#1f1f1f;
+            color:white;
+        }
+
+        .toggle{
+            position:fixed;
+            right:20px;
+            top:20px;
+            background:#ff1493;
+            color:white;
+            border:none;
+            padding:12px 18px;
+            border-radius:25px;
+            cursor:pointer;
+        }
+
+        footer{
+            text-align:center;
+            padding:30px;
+            font-size:20px;
+            color:#800040;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Dark Mode Button -->
-    <button class="toggle" onclick="darkMode()">🌙 Dark Mode</button>
+<button class="toggle" onclick="darkMode()">🌙 Dark Mode</button>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="quotes.html">Thoughts & Quotes</a>
-        <a href="special.html">Why Amma Is Special</a>
-        <a href="wishes.html">Birthday Wishes</a>
-        <a href="blessings.html">Blessings</a>
-    </nav>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="quotes.html">Thoughts & Quotes</a>
+    <a href="special.html">Why Amma Is Special</a>
+    <a href="memory.html">Memory Book</a>
+    <a href="letter.html">Letter & Certificate</a>
+</nav>
 
-    <!-- Home Section -->
-    <section class="hero">
+<section class="hero">
 
-        <h1>🎂 Happy Birthday Amma Sathya ❤️</h1>
+    <h1>🎂 Happy Birthday Amma Sathya ❤️</h1>
 
-        <div class="typing">
-            Wishing you endless happiness, love and good health...
-        </div>
-
-        <div class="card">
-
-            <h2>💖 Dear Amma</h2>
-
-            <p>
-                You are the heart of our family and the light that brightens every day.
-                Your endless love, kindness and sacrifices have made our lives beautiful.
-            </p>
-
-            <br>
-
-            <p>
-                Thank you for always supporting us with patience and unconditional love.
-                May this birthday bring you joy, peace and countless blessings.
-            </p>
-
-            <br>
-
-            <p>
-                🌸 Happy Birthday to the World's Best Mother 🌸
-            </p>
-
-        </div>
-
-        <button class="btn" onclick="showMessage()">
-            💌 Secret Message
-        </button>
-
-        <div class="message" id="message">
-            Thank you for making my world beautiful ❤️🌹
-        </div>
-
-    </section>
-
-    <!-- Birthday Wishes Cards -->
-
-    <div class="card">
-        <h2>🌷 Special Wish</h2>
-
-        <p>
-            May your life always be filled with happiness, laughter and beautiful memories.
-        </p>
+    <div class="typing">
+        Wishing you endless happiness, love and good health...
     </div>
 
-    <div class="card">
-        <h2>✨ Endless Love</h2>
+    <div class="wish">
+        Dear Amma,<br><br>
 
-        <p>
-            No words can describe how grateful we are to have you in our lives.
-        </p>
+        You are the heart of our family and the light that brightens every day.
+        Your endless love, care and sacrifices have made our lives beautiful.
+        Thank you for always standing beside us with kindness and strength.
+        May this birthday bring you joy, peace and countless blessings.
+
+        <br><br>
+
+        💖 Happy Birthday to the World's Best Mother 💖
     </div>
 
-    <div class="card">
-        <h2>🌹 Forever Blessed</h2>
+    <button class="btn" onclick="showMessage()">
+        💌 Secret Message
+    </button>
 
-        <p>
-            Your love is the greatest gift and your smile is our biggest happiness.
-        </p>
+    <div class="message" id="message">
+        Thank you for making my world beautiful ❤️🌹
     </div>
 
-    <footer>
-        Made with Endless Love by Gowtham M S ❤️
-    </footer>
+</section>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+<footer>
+    Made with Endless Love by Gowtham M S ❤️
+</footer>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+
+function darkMode(){
+    document.body.classList.toggle("dark-mode");
+}
+
+// Falling hearts
+for(let i=0;i<40;i++){
+    let heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(15+Math.random()*25)+"px";
+    heart.style.animationDuration=(5+Math.random()*6)+"s";
+    document.body.appendChild(heart);
+}
+
+// Floating roses
+for(let i=0;i<20;i++){
+    let rose=document.createElement("div");
+    rose.classList.add("rose");
+    rose.innerHTML="🌹";
+    rose.style.left=Math.random()*100+"vw";
+    rose.style.animationDuration=(8+Math.random()*6)+"s";
+    document.body.appendChild(rose);
+}
+
+// Fireworks
+setInterval(() => {
+
+    let firework = document.createElement("div");
+
+    firework.innerHTML = "✨🎆✨";
+
+    firework.style.position = "fixed";
+    firework.style.left = Math.random()*90 + "vw";
+    firework.style.top = Math.random()*80 + "vh";
+    firework.style.fontSize = "30px";
+
+    document.body.appendChild(firework);
+
+    setTimeout(()=>{
+        firework.remove();
+    },1000);
+
+},800);
+
+</script>
 
 </body>
 </html>
