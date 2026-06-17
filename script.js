@@ -1,27 +1,21 @@
-function surprise(){
-alert("❤️ Happy Birthday Amma Sathya ❤️");
-}
-
-let slideIndex=0;
+let slideIndex = 0;
 
 showSlides();
 
-function showSlides(){
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
 
-let slides=document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
 
-for(let i=0;i<slides.length;i++){
-slides[i].style.display="none";
-}
+    slideIndex++;
 
-slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
 
-if(slideIndex>slides.length){
-slideIndex=1;
-}
+    slides[slideIndex - 1].style.display = "block";
 
-slides[slideIndex-1].style.display="block";
-
-setTimeout(showSlides,3000);
-
+    setTimeout(showSlides, 3000);
 }
