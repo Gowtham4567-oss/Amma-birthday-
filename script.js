@@ -1,6 +1,9 @@
-// =======================
-// Dark Mode Toggle
-// =======================
+// ===============================
+// Happy Birthday Amma Sathya ❤️
+// script.js
+// ===============================
+
+// ---------- Dark Mode ----------
 function darkMode() {
     document.body.classList.toggle("dark-mode");
 
@@ -13,152 +16,108 @@ function darkMode() {
 
 // Load saved theme
 window.addEventListener("load", () => {
-    let savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
         document.body.classList.add("dark-mode");
     }
 });
 
-// =======================
-// Secret Message
-// =======================
+
+// ---------- Secret Message ----------
 function showMessage() {
-    let message = document.getElementById("message");
+    const message = document.getElementById("message");
 
     if (message) {
-        message.style.display = "block";
+        if (message.style.display === "block") {
+            message.style.display = "none";
+        } else {
+            message.style.display = "block";
+        }
     }
 }
 
-// =======================
-// Falling Hearts
-// =======================
+
+// ---------- Falling Hearts ----------
 function createHearts() {
 
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 30; i++) {
 
         let heart = document.createElement("div");
 
         heart.classList.add("heart");
+
         heart.innerHTML = "❤️";
 
         heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = (15 + Math.random() * 25) + "px";
-        heart.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+        heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+        heart.style.animationDuration =
+            (5 + Math.random() * 6) + "s";
 
         document.body.appendChild(heart);
     }
-
 }
 
 createHearts();
 
-// =======================
-// Floating Roses
-// =======================
-function createRoses() {
 
-    for (let i = 0; i < 20; i++) {
-
-        let rose = document.createElement("div");
-
-        rose.classList.add("rose");
-        rose.innerHTML = "🌹";
-
-        rose.style.left = Math.random() * 100 + "vw";
-        rose.style.fontSize = (20 + Math.random() * 15) + "px";
-        rose.style.animationDuration = (8 + Math.random() * 8) + "s";
-
-        document.body.appendChild(rose);
-    }
-
-}
-
-createRoses();
-
-// =======================
-// Balloons
-// =======================
-function createBalloons() {
-
-    let colors = ["🎈", "🎉", "🎊"];
-
-    for (let i = 0; i < 15; i++) {
-
-        let balloon = document.createElement("div");
-
-        balloon.classList.add("balloon");
-
-        balloon.innerHTML =
-            colors[Math.floor(Math.random() * colors.length)];
-
-        balloon.style.left = Math.random() * 100 + "vw";
-
-        balloon.style.fontSize = (25 + Math.random() * 20) + "px";
-
-        balloon.style.animationDuration =
-            (10 + Math.random() * 10) + "s";
-
-        document.body.appendChild(balloon);
-    }
-
-}
-
-createBalloons();
-
-// =======================
-// Twinkling Stars
-// =======================
-function createStars() {
-
-    for (let i = 0; i < 40; i++) {
-
-        let star = document.createElement("div");
-
-        star.classList.add("star");
-
-        star.innerHTML = "✨";
-
-        star.style.left = Math.random() * 100 + "vw";
-
-        star.style.top = Math.random() * 100 + "vh";
-
-        star.style.fontSize = (10 + Math.random() * 15) + "px";
-
-        document.body.appendChild(star);
-    }
-
-}
-
-createStars();
-
-// =======================
-// Fireworks
-// =======================
-setInterval(() => {
+// ---------- Fireworks ----------
+function createFirework() {
 
     let firework = document.createElement("div");
 
+    firework.classList.add("firework");
+
     firework.innerHTML = "🎆";
 
-    firework.style.position = "fixed";
     firework.style.left = Math.random() * 90 + "vw";
+
     firework.style.top = Math.random() * 80 + "vh";
-    firework.style.fontSize = "35px";
-    firework.style.zIndex = "999";
 
     document.body.appendChild(firework);
 
     setTimeout(() => {
         firework.remove();
     }, 1000);
+}
 
-}, 900);
+// Generate fireworks every 1.5 seconds
+setInterval(createFirework, 1500);
 
-// =======================
-// Smooth Scrolling
-// =======================
+
+// ---------- Floating Stars ----------
+function createStars() {
+
+    for (let i = 0; i < 40; i++) {
+
+        let star = document.createElement("div");
+
+        star.innerHTML = "✨";
+
+        star.style.position = "fixed";
+
+        star.style.left = Math.random() * 100 + "vw";
+
+        star.style.top = Math.random() * 100 + "vh";
+
+        star.style.opacity = "0.6";
+
+        star.style.fontSize = "14px";
+
+        document.body.appendChild(star);
+    }
+}
+
+createStars();
+
+
+// ---------- Welcome Message ----------
+console.log("🎂 Happy Birthday Amma Sathya ❤️");
+
+
+// ---------- Smooth Scroll ----------
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     anchor.addEventListener("click", function (e) {
@@ -169,37 +128,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             .scrollIntoView({
                 behavior: "smooth"
             });
-
     });
 
 });
-
-// =======================
-// Welcome Message
-// =======================
-window.onload = function () {
-
-    console.log("Happy Birthday Amma Sathya ❤️");
-
-};
-
-// =======================
-// Background Music Control
-// =======================
-function toggleMusic() {
-
-    let music = document.getElementById("birthdayMusic");
-
-    if (!music) return;
-
-    if (music.paused) {
-
-        music.play();
-
-    } else {
-
-        music.pause();
-
-    }
-
-}
